@@ -7,7 +7,7 @@ import User from "./models/User.js";
 import authRoutes from "./routes/auth.js";
 import jobRoutes from "./routes/jobs.js";
 import applicationRoutes from "./routes/applications.js";
-const app=express(),port=Number(process.env.PORT||5000);
+const app=express(),port=Number(process.env.PORT)||5000; // "0" or junk falls back to 5000
 if(!process.env.JWT_SECRET){console.error("Set JWT_SECRET in server/.env");process.exit(1);}
 app.use(cors({origin:process.env.CLIENT_URL||"http://localhost:5173"}));
 app.use(express.json({limit:"1mb"}));app.use(express.urlencoded({extended:true}));

@@ -1,0 +1,52 @@
+# Dependencies
+node_modules/
+
+# Environment / secrets — never commit these
+.env
+.env.local
+.env.*.local
+server/.dev.vars
+secrets.json
+*.secret.*
+
+# Build output
+client/dist/
+dist/
+
+# Uploaded files (resumes)
+server/uploads/
+
+# Portable local runtime (developer machine only)
+.runtime/
+
+# Pre-redesign backup copies (local only)
+.backup/
+
+# Logs and caches
+*.log
+npm-debug.log*
+.npm/
+.vite/
+.cache/
+.mongod/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Temporary Node.js files in project root
+/node.exe
+/nodevars.bat
+/npm
+/npm.cmd
+/npm.ps1
+/npx
+/npx.cmd
+/npx.ps1
+/corepack
+/corepack.cmd
+/install_tools.bat
+
